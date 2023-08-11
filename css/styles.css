@@ -1,6 +1,7 @@
 /* Major elements */
 body {
   background-color: #27374d;
+  color: #dde6ed;
 }
 
 /* Specifics */
@@ -14,6 +15,7 @@ body {
   padding: 1%;
   border: 2px black dotted;
   margin: 0 2% 0 1%;
+  color: #192734;
   background-color: #526d82;
   /* background-color: #f94c1050; */
   box-sizing: border-box;
@@ -25,7 +27,24 @@ body {
   padding: 1%;
   border: 2px black dashed;
   margin: 0 2% 0 1%;
+  color: #192734;
   background-color: #526d82;
   /* background-color: #beadfa60; */
   box-sizing: border-box;
+}
+
+#results-col-left {
+  float: left;
+  width: 46%;
+  padding: 1%;
+  border: 2px black dashed;
+  margin: 0 2% 0 1%;
+}
+
+#results-col-right {
+  float: left;
+  width: 46%;
+  padding: 1%;
+  border: 2px black dashed;
+  margin: 0 2% 0 1%;
 }

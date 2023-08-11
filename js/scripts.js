@@ -49,6 +49,21 @@ function languageDeterminer(difficulty, adjective, color, personality) {
 }
 
 // User Interface Logic
+function imageSrcDeterminer(nameOfLanguage) {
+  let imageSrc;
+  if (nameOfLanguage === "Python") {
+    imageSrc = "img/python-logo.svg";
+  } else if (nameOfLanguage === "Ruby") {
+    imageSrc = "img/ruby-logo.svg";
+  } else if (nameOfLanguage === "Java") {
+    imageSrc = "img/java-logo.svg";
+  } else if (nameOfLanguage === "C") {
+    imageSrc = "img/c-logo.svg";
+  }
+
+  return imageSrc;
+}
+
 function resultPreparer(event) {
   event.preventDefault();
 
@@ -61,6 +76,7 @@ function resultPreparer(event) {
 
   // Calls language determiner function
   let calculatedResult = languageDeterminer(userDifficulty, userAdjective, userColor, userPersonality);
+  let imageSourceFile = imageSrcDeterminer(calculatedResult);
 
   // Displays to User
   document.getElementById("results-user-name").innerText = userName;
@@ -69,6 +85,7 @@ function resultPreparer(event) {
   document.getElementById("provided-adjective").innerText = userAdjective;
   document.getElementById("provided-color").innerText = userColor;
   document.getElementById("provided-personality").innerText = userPersonality;
+  document.getElementById("image-program-language").src = imageSourceFile;
 
   // Unhides Results Div
   document.getElementById("resultsDiv").removeAttribute("class");

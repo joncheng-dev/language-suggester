@@ -10,10 +10,12 @@
   </head>
   <body>
     <div class="container">
-      <h1>Programming Language Suggester</h1>
-      <blockquote class="blockquote">
-        <p>Which programming language you should learn first?</p>
-      </blockquote>
+      <div class="jumbotron">
+        <h1>Programming Language Suggester</h1>
+        <blockquote class="blockquote">
+          <p>Which programming language you should learn first?</p>
+        </blockquote>
+      </div>
       <div id="mainDiv">
         <h2>Fill out this form!</h2>
         <form id="user-data-collector">
@@ -56,30 +58,25 @@
       <div id="resultsDiv" class="hidden">
         <h2>Results</h2>
         <div id="results">
-          <p><span id="results-user-name"></span>, you got <span id="results-language"></span>!</p>
-          <p>This is the information you provided:</p>
-          <dl class="row">
-            <dt class="col-sm-3">Difficulty: </dt>
-            <dd class="col-sm-9"><span id="provided-difficulty"></span></dd>
-            <dt class="col-sm-3">Adjective: </dt>
-            <dd class="col-sm-9"><span id="provided-adjective"></span></dd>
-            <dt class="col-sm-3">Color: </dt>
-            <dd class="col-sm-9"><span id="provided-color"></span></dd>
-            <dt class="col-sm-3">Personality: </dt>
-            <dd class="col-sm-9"><span id="provided-personality"></span></dd>
-          </dl>     
+          <div id="results-col-left">
+            <p><span id="results-user-name"></span>, you got <span id="results-language"></span>!</p>
+            <p>This is the information you provided:</p>
+            <dl class="row">
+              <dt class="col-sm-5">Difficulty: </dt>
+              <dd class="col-sm-7"><span id="provided-difficulty"></span></dd>
+              <dt class="col-sm-5">Adjective: </dt>
+              <dd class="col-sm-7"><span id="provided-adjective"></span></dd>
+              <dt class="col-sm-5">Color: </dt>
+              <dd class="col-sm-7"><span id="provided-color"></span></dd>
+              <dt class="col-sm-5">Personality: </dt>
+              <dd class="col-sm-7"><span id="provided-personality"></span></dd>
+            </dl>     
+          </div>
+          <div id="results-col-right">
+            <img id="image-program-language" src="" alt="image of programming logo">
+          </div>
         </div>
       </div>
     </div>
   </body>
 </html>
-
-<!-- 
-<p><span id="results-user-name"></span>, you got <span id="results-language"></span>!</p>
-          <p>This is the information you provided:</p>
-          <ul>
-            <li><strong>Difficulty: </strong><span id="provided-difficulty"></span></li>
-            <li><strong>Adjective: </strong><span id="provided-adjective"></span></li>
-            <li><strong>Color: </strong><span id="provided-color"></span></li>
-            <li><strong>Personality: </strong><span id="provided-personality"></span></li>
-          </ul> -->

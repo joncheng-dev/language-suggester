@@ -1,9 +1,8 @@
 // Business Logic
-
-// Save for later
-// , adjective, color, personality
 function languageDeterminer(difficulty, adjective, color, personality) {
   let userScore = 0;
+  let languageResult;
+
   if (difficulty === "easy") {
     userScore += 0;
   } else if (difficulty === "low") {
@@ -31,12 +30,38 @@ function languageDeterminer(difficulty, adjective, color, personality) {
   } else if (personality === "introvert") {
     userScore += 2;
   }
-  return userScore;
+
+  if (userScore) {
+    if (userScore === 3) {
+      languageResult = "Python";
+    } else if (userScore === 4) {
+      languageResult = "Ruby";
+    } else if (userScore >= 5 && userScore <= 7) {
+      languageResult = "Java";
+    } else if (userScore >= 8 && userScore <= 9) {
+      languageResult = "C";
+    }
+  } else {
+    languageResult = "Error.";
+  }
+
+  return languageResult;
 }
 
 // User Interface Logic
+function formResetter() {
+  document.getElementById("user-name").innerText = "";
+  document.getElementById("color-dark").checked = false;
+  document.getElementById("color-bright").checked = false;
+  document.getElementById("personality-extrovert").checked = false;
+  document.getElementById("personality-introvert").checked = false;
+}
+
+// document.getElementById("resetForm").addEventListener("click", formResetter);
+
 function resultPreparer(event) {
   event.preventDefault();
+
   // Collects user entered data
   const userName = document.getElementById("user-name").value;
   const userDifficulty = document.getElementById("user-difficulty").value;
@@ -50,6 +75,8 @@ function resultPreparer(event) {
   document.getElementById("results").innerText = result;
   // Displays Results Div
   document.getElementById("resultsDiv").removeAttribute("class");
+  // Resets the form
+  formResetter();
 }
 
 function formLoader() {

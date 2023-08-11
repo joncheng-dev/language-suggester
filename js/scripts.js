@@ -1,6 +1,8 @@
 // Business Logic
 
-function languageDeterminer(difficulty, adjective, color, personality) {
+// Save for later
+// , adjective, color, personality
+function languageDeterminer(difficulty) {
   let userScore = 0;
   if (difficulty === "easy") {
     userScore += 0;
@@ -11,6 +13,7 @@ function languageDeterminer(difficulty, adjective, color, personality) {
   } else if (difficulty === "high") {
     userScore += 3;
   }
+
   return userScore;
 }
 
@@ -18,7 +21,14 @@ function languageDeterminer(difficulty, adjective, color, personality) {
 function resultPreparer(event) {
   event.preventDefault();
 
-  const userEnteredName = document.querySelector("input#user-name").value;
+  const userEnteredName = document.getElementById("user-name").value;
+  const userEnteredDifficulty = document.getElementById("user-difficulty").value;
+
+  let result = languageDeterminer(userEnteredDifficulty);
+  document.getElementById("results-user-name").innerText = userEnteredName;
+  document.getElementById("results").innerText = result;
+
+  document.getElementById("resultsDiv").removeAttribute("class");
 }
 
 function formLoader() {

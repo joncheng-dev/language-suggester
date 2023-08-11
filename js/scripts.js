@@ -49,16 +49,6 @@ function languageDeterminer(difficulty, adjective, color, personality) {
 }
 
 // User Interface Logic
-function formResetter() {
-  document.getElementById("user-name").innerText = "";
-  document.getElementById("color-dark").checked = false;
-  document.getElementById("color-bright").checked = false;
-  document.getElementById("personality-extrovert").checked = false;
-  document.getElementById("personality-introvert").checked = false;
-}
-
-// document.getElementById("resetForm").addEventListener("click", formResetter);
-
 function resultPreparer(event) {
   event.preventDefault();
 
@@ -69,14 +59,18 @@ function resultPreparer(event) {
   const userColor = document.querySelector("input[name='user-color-preference']:checked").value;
   const userPersonality = document.querySelector("input[name='user-personality']:checked").value;
   // Calls language determiner function
-  let result = languageDeterminer(userDifficulty, userAdjective, userColor, userPersonality);
-  // Displays results to DOM
+  let calculatedResult = languageDeterminer(userDifficulty, userAdjective, userColor, userPersonality);
+  // Displays to User
   document.getElementById("results-user-name").innerText = userName;
-  document.getElementById("results").innerText = result;
+  document.getElementById("results-language").innerText = calculatedResult;
+  document.getElementById("provided-difficulty").innerText = userDifficulty;
+  document.getElementById("provided-adjective").innerText = userAdjective;
+  document.getElementById("provided-color").innerText = userColor;
+  document.getElementById("provided-personality").innerText = userPersonality;
   // Displays Results Div
   document.getElementById("resultsDiv").removeAttribute("class");
-  // Resets the form
-  formResetter();
+  // Resets the form (after data processed & displayed to user)
+  document.getElementById("user-data-collector").reset();
 }
 
 function formLoader() {

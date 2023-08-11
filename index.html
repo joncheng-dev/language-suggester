@@ -48,8 +48,16 @@
     </form>
     <div id="resultsDiv" class="hidden">
       <h2>Results</h2>
-      <p id="results-user-name"></p>
-      <p id="results"></p>
+      <div id="results">
+        <p><span id="results-user-name"></span>, you got <span id="results-language"></span>!</p>
+        <p>This is the information you provided:</p>
+        <ul>
+          <li><strong>Difficulty: </strong><span id="provided-difficulty"></span></li>
+          <li><strong>Adjective: </strong><span id="provided-adjective"></span></li>
+          <li><strong>Color: </strong><span id="provided-color"></span></li>
+          <li><strong>Personality: </strong><span id="provided-personality"></span></li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

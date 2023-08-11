@@ -64,6 +64,20 @@ function imageSrcDeterminer(nameOfLanguage) {
   return imageSrc;
 }
 
+function languageLinkDeterminer(nameOfLanguage) {
+  let hrefLink;
+  if (nameOfLanguage === "Python") {
+    hrefLink = "https://www.python.org/";
+  } else if (nameOfLanguage === "Ruby") {
+    hrefLink = "https://www.ruby-lang.org/en/";
+  } else if (nameOfLanguage === "Java") {
+    hrefLink = "https://www.java.com/en/";
+  } else if (nameOfLanguage === "C") {
+    hrefLink = "https://en.wikipedia.org/wiki/C_(programming_language)";
+  }
+  return hrefLink;
+}
+
 function resultPreparer(event) {
   event.preventDefault();
 
@@ -77,15 +91,18 @@ function resultPreparer(event) {
   // Calls language determiner function
   let calculatedResult = languageDeterminer(userDifficulty, userAdjective, userColor, userPersonality);
   let imageSourceFile = imageSrcDeterminer(calculatedResult);
+  let linkAddress = languageLinkDeterminer(calculatedResult);
 
   // Displays to User
   document.getElementById("results-user-name").innerText = userName;
-  document.getElementById("results-language").innerText = calculatedResult;
+  document.getElementById("results-language1").innerText = calculatedResult;
+  document.getElementById("results-language2").innerText = calculatedResult;
   document.getElementById("provided-difficulty").innerText = userDifficulty;
   document.getElementById("provided-adjective").innerText = userAdjective;
   document.getElementById("provided-color").innerText = userColor;
   document.getElementById("provided-personality").innerText = userPersonality;
   document.getElementById("image-program-language").src = imageSourceFile;
+  document.getElementById("results-language-link").href = linkAddress;
 
   // Unhides Results Div
   document.getElementById("resultsDiv").removeAttribute("class");

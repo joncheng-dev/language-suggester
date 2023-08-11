@@ -16,13 +16,14 @@
           <p>Which programming language you should learn first?</p>
         </blockquote>
       </div>
-      <div id="mainDiv">
+      <div id="mainDiv" class="column-generic">
         <h2>Fill out this form!</h2>
         <form id="user-data-collector">
           <div class="form-group">
             <label for="user-name">Enter your name:</label>
             <input id="user-name" class="form-control" type="text" name="user-name" />
           </div>
+          </br>
           <div class="form-group">
             <label for="user-difficulty">Difficulty level?</label>
             <select id="user-difficulty" class="form-control">
@@ -32,6 +33,7 @@
               <option value="high">High</option>
             </select>
           </div>
+          </br>
           <div class="form-group">
             <label for="user-adjective">Choose an Adjective:</label>
             <select id="user-adjective" class="form-control">
@@ -39,6 +41,7 @@
               <option value="niche">Niche</option>
             </select>      
           </div>
+          </br>
           <label for="user-color-preference">What is Your Color Preference?</label>
           <div class="form-check">
             <input type="radio" class="form-check-input" id="color-dark" name="user-color-preference" value="dark">
@@ -59,14 +62,15 @@
             <label class="form-check-label" for="user-personality">Introvert</label>            
           </div>
           </br>
-          <button id="resetForm" type="submit">Submit</button>
+          <button id="resetForm" class="button" type="submit">Submit</button>
         </form>
       </div>
       <div id="resultsDiv" class="hidden">
         <h2>Results</h2>
         <div id="results">
-          <div id="results-col-left">
-            <p><span id="results-user-name"></span>, you got <span id="results-language"></span>!</p>
+          <div id="results-col-left" class="column-generic">
+            <p><span id="results-user-name"></span>, you got <span id="results-language1"></span>!</p>
+            <p>Click to read more about <a id="results-language-link" href=""><span id="results-language2"></span></a>!</p>
             <p>This is the information you provided:</p>
             <dl class="row">
               <dt class="col-sm-5">Difficulty: </dt>
@@ -79,7 +83,7 @@
               <dd class="col-sm-7"><span id="provided-personality"></span></dd>
             </dl>     
           </div>
-          <div id="results-col-right">
+          <div id="results-col-right" class="column-generic">
             <img id="image-program-language" src="" alt="image of programming logo">
           </div>
         </div>

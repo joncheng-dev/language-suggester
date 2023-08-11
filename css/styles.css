@@ -1,21 +1,40 @@
 /* Major elements */
 body {
   background-color: #27374d;
-  color: #dde6ed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Specifics */
+.jumbotron {
+  color: #dde6ed;
+}
+
+.column-generic {
+  float: left;
+  width: 46%;
+  padding: 1%;
+  margin: 0 2% 0 1%;
+}
+
+.button {
+  background-color: #e7e7e7;
+  border: 2px solid gray;
+  border-radius: 4px;
+  color: #444444;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
 .hidden {
   display: none;
 }
 
 #mainDiv {
-  float: left;
-  width: 46%;
-  padding: 1%;
   border: 2px black dotted;
-  margin: 0 2% 0 1%;
-  color: #192734;
+  color: #9db2bf;
   background-color: #526d82;
   box-sizing: border-box;
 }
@@ -24,27 +43,19 @@ body {
   float: left;
   width: 46%;
   padding: 1%;
-  border: 2px black dashed;
   margin: 0 2% 0 1%;
-  color: #192734;
+  border: 2px black dashed;
+  color: #f4eee0;
   background-color: #526d82;
   box-sizing: border-box;
 }
 
 #results-col-left {
-  float: left;
-  width: 46%;
-  padding: 1%;
   border: 2px black dashed;
-  margin: 0 2% 0 1%;
 }
 
 #results-col-right {
-  float: left;
-  width: 46%;
-  padding: 1%;
   border: 2px black dashed;
-  margin: 0 2% 0 1%;
 }
 
 #image-program-language {

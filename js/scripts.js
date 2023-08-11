@@ -58,8 +58,10 @@ function resultPreparer(event) {
   const userAdjective = document.getElementById("user-adjective").value;
   const userColor = document.querySelector("input[name='user-color-preference']:checked").value;
   const userPersonality = document.querySelector("input[name='user-personality']:checked").value;
+
   // Calls language determiner function
   let calculatedResult = languageDeterminer(userDifficulty, userAdjective, userColor, userPersonality);
+
   // Displays to User
   document.getElementById("results-user-name").innerText = userName;
   document.getElementById("results-language").innerText = calculatedResult;
@@ -67,8 +69,10 @@ function resultPreparer(event) {
   document.getElementById("provided-adjective").innerText = userAdjective;
   document.getElementById("provided-color").innerText = userColor;
   document.getElementById("provided-personality").innerText = userPersonality;
-  // Displays Results Div
+
+  // Unhides Results Div
   document.getElementById("resultsDiv").removeAttribute("class");
+
   // Resets the form (after data processed & displayed to user)
   document.getElementById("user-data-collector").reset();
 }

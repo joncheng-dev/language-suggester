@@ -1,3 +1,31 @@
+/* Major elements */
+body {
+  background-color: #27374d;
+}
+
+/* Specifics */
 .hidden {
   display: none;
+}
+
+#mainDiv {
+  float: left;
+  width: 46%;
+  padding: 1%;
+  border: 2px black dotted;
+  margin: 0 2% 0 1%;
+  background-color: #526d82;
+  /* background-color: #f94c1050; */
+  box-sizing: border-box;
+}
+
+#resultsDiv {
+  float: left;
+  width: 46%;
+  padding: 1%;
+  border: 2px black dashed;
+  margin: 0 2% 0 1%;
+  background-color: #526d82;
+  /* background-color: #beadfa60; */
+  box-sizing: border-box;
 }

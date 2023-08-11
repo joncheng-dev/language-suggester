@@ -23,12 +23,26 @@
       </select>
       </br>
       <label for="user-adjective">Choose an Adjective:</label>
+      <select id="user-adjective">
+        <option value="general">General</option>
+        <option value="niche">Niche</option>
+      </select>      
+      </br>
+      <label for="user-color-preference">What is Your Color Preference?</label>
       <label>
-        <input type="radio" name="user-adjective" value="General">General
+        <input type="radio" name="user-color-preference" value="dark">Dark
       </label>
       <label>
-        <input type="radio" name="user-adjective" value="Niche">Niche
-      </label>      
+        <input type="radio" name="user-color-preference" value="bright">Bright
+      </label>
+      </br>
+      <label for="user-personality">Which Best Describes Your Personality?</label>
+      <label>
+        <input type="radio" name="user-personality" value="extrovert">Extrovert
+      </label>
+      <label>
+        <input type="radio" name="user-personality" value="introvert">Introvert
+      </label>
       </br>
       <button type="submit">Submit</button>
     </form>

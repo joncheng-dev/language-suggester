@@ -19,38 +19,45 @@
       <div id="mainDiv">
         <h2>Fill out this form!</h2>
         <form id="user-data-collector">
-          <label for="user-name">Enter your name:</label>
-          <input id="user-name" type="text" name="user-name" />
-          </br>
-          <label for="user-difficulty">Difficulty level?</label>
-          <select id="user-difficulty">
-            <option value="easy">Easy</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
-          </br>
-          <label for="user-adjective">Choose an Adjective:</label>
-          <select id="user-adjective">
-            <option value="general">General</option>
-            <option value="niche">Niche</option>
-          </select>      
-          </br>
+          <div class="form-group">
+            <label for="user-name">Enter your name:</label>
+            <input id="user-name" class="form-control" type="text" name="user-name" />
+          </div>
+          <div class="form-group">
+            <label for="user-difficulty">Difficulty level?</label>
+            <select id="user-difficulty" class="form-control">
+              <option value="easy">Easy</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="user-adjective">Choose an Adjective:</label>
+            <select id="user-adjective" class="form-control">
+              <option value="general">General</option>
+              <option value="niche">Niche</option>
+            </select>      
+          </div>
           <label for="user-color-preference">What is Your Color Preference?</label>
-          <label>
-            <input type="radio" id="color-dark" name="user-color-preference" value="dark">Dark
-          </label>
-          <label>
-            <input type="radio" id="color-bright" name="user-color-preference" value="bright">Bright
-          </label>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="color-dark" name="user-color-preference" value="dark">
+            <label class="form-check-label" for="user-color-preference">Dark</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="color-bright" name="user-color-preference" value="bright">
+            <label class="form-check-label" for="user-color-preference">Bright</label>
+          </div>
           </br>
           <label for="user-personality">Which Best Describes Your Personality?</label>
-          <label>
-            <input type="radio" id="personality-extrovert" name="user-personality" value="extrovert">Extrovert
-          </label>
-          <label>
-            <input type="radio" id="personality-introvert" name="user-personality" value="introvert">Introvert
-          </label>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="personality-extrovert" name="user-personality" value="extrovert">
+            <label class="form-check-label" for="user-personality">Extrovert</label>            
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="personality-introvert" name="user-personality" value="introvert">
+            <label class="form-check-label" for="user-personality">Introvert</label>            
+          </div>
           </br>
           <button id="resetForm" type="submit">Submit</button>
         </form>

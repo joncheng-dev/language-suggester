@@ -17,7 +17,6 @@ body {
   margin: 0 2% 0 1%;
   color: #192734;
   background-color: #526d82;
-  /* background-color: #f94c1050; */
   box-sizing: border-box;
 }
 
@@ -29,7 +28,6 @@ body {
   margin: 0 2% 0 1%;
   color: #192734;
   background-color: #526d82;
-  /* background-color: #beadfa60; */
   box-sizing: border-box;
 }
 
@@ -47,4 +45,11 @@ body {
   padding: 1%;
   border: 2px black dashed;
   margin: 0 2% 0 1%;
+}
+
+#image-program-language {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
 }

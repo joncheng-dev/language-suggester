@@ -60,7 +60,6 @@ function imageSrcDeterminer(nameOfLanguage) {
   } else if (nameOfLanguage === "C") {
     imageSrc = "img/c-logo.svg";
   }
-
   return imageSrc;
 }
 
@@ -88,7 +87,7 @@ function resultPreparer(event) {
   const userColor = document.querySelector("input[name='user-color-preference']:checked").value;
   const userPersonality = document.querySelector("input[name='user-personality']:checked").value;
 
-  // Calls language determiner function
+  // Calls Determiner functions (Decides what to display to user)
   let calculatedResult = languageDeterminer(userDifficulty, userAdjective, userColor, userPersonality);
   let imageSourceFile = imageSrcDeterminer(calculatedResult);
   let linkAddress = languageLinkDeterminer(calculatedResult);

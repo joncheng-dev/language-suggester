@@ -34,7 +34,7 @@ body {
 
 #mainDiv {
   border: 2px black dotted;
-  color: #9db2bf;
+  color: #dde6ed;
   background-color: #526d82;
   box-sizing: border-box;
 }
@@ -45,7 +45,7 @@ body {
   padding: 1%;
   margin: 0 2% 0 1%;
   border: 2px black dashed;
-  color: #f4eee0;
+  color: #dde6ed;
   background-color: #526d82;
   box-sizing: border-box;
 }

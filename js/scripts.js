@@ -48,7 +48,6 @@ function languageDeterminer(difficulty, adjective, color, personality) {
   return languageResult;
 }
 
-// User Interface Logic
 function imageSrcDeterminer(nameOfLanguage) {
   let imageSrc;
   if (nameOfLanguage === "Python") {
@@ -77,6 +76,7 @@ function languageLinkDeterminer(nameOfLanguage) {
   return hrefLink;
 }
 
+// User Interface Logic
 function resultPreparer(event) {
   event.preventDefault();
 
